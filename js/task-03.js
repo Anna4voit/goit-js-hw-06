@@ -12,3 +12,12 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const listEl = document.querySelector('.gallery');
+images.forEach(image => {
+  //створюємо шаблонний рядок
+  const itemListEl = `<li class="list-item"><img class="list-image" src="${image.url}" alt="${image.alt}" /></li>`;
+  //додаємо кожен елемент ддо списку
+  listEl.insertAdjacentHTML('beforeend', itemListEl);
+  console.log(itemListEl);
+});
