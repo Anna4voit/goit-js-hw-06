@@ -13,11 +13,20 @@ const images = [
   },
 ];
 
-const listEl = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 images.forEach(image => {
   //створюємо шаблонний рядок
   const itemListEl = `<li ><img  src="${image.url}" alt="${image.alt}" width = 500 height = auto /></li>`;
   //додаємо кожен елемент до списку
-  listEl.insertAdjacentHTML('beforeend', itemListEl);
+  gallery.insertAdjacentHTML('beforeend', itemListEl);
   console.log(itemListEl);
 });
+
+// const itemGallery = images
+//   .map(
+//     ({ url, alt }) =>
+//       `<li><img  src="${url}" alt="${alt}" width = 500 height = auto /></li>`
+//   )
+//   .join('');
+// console.log(itemGallery);
+// gallery.insertAdjacentHTML('beforeend', itemGallery);
