@@ -21,6 +21,7 @@ images.forEach(image => {
   gallery.insertAdjacentHTML('beforeend', itemListEl);
   console.log(itemListEl);
 });
+
 //можна додати  деякі стилі: прибераємо маркування списку, додаємо флексбокс
 // gallery.style.listStyleType = 'none';
 // gallery.style.display = 'flex';

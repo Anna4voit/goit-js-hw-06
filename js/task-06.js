@@ -4,7 +4,7 @@ const inputEl = document.querySelector('#validation-input');
 //так можна отримати значення атрибуту інпуту
 //console.log(inputEl.getAttribute('data-length'));
 //отримуємо значення атрибуту інпуту, тобто довжину для порівняння
-const length = Number(inputEl.getAttribute('data-length'));
+const length = Number(inputEl.dataset.length);
 //console.log(typeof length);
 
 //навішуємо слухача на інпут - блюр
@@ -13,7 +13,7 @@ inputEl.addEventListener('blur', changeStyle);
 //робимо колбек-функцію
 function changeStyle(event) {
   //отримуємо довжину  рядка, що вводиться в поле
-  const valueInput = inputEl.value.trim().length;
+  const valueInput = event.currentTarget.value.trim().length;
   //порівнюємо довжину рядка із значенням атрибуту і змінюємо колір бордеру
   if (valueInput == length) {
     inputEl.classList.add('valid');

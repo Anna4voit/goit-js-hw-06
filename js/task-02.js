@@ -22,12 +22,11 @@ ingredients.forEach(ingredient => {
   console.log(itemListIngredientsEl);
 });
 
-//можна зробити так ?
+//можна зробити так
 // const itemsEl = ingredients.map(ingredient => {
 //   const itemListIngredientsEl = document.createElement('li');
 //   itemListIngredientsEl.textContent = ingredient;
 //   itemListIngredientsEl.classList.add('item');
-//   //listIngredientsEl.append(itemListIngredientsEl);
-//   return itemListIngredientsEl;
+//     return itemListIngredientsEl;
 // });
 // listIngredientsEl.append(...itemsEl);
