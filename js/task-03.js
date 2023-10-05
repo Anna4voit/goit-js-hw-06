@@ -16,22 +16,22 @@ const images = [
 const gallery = document.querySelector('.gallery');
 images.forEach(image => {
   //створюємо шаблонний рядок
-  const itemListEl = `<li ><img  src="${image.url}" alt="${image.alt}" width = 500 height = auto /></li>`;
+  const itemListEl = `<li><img  src="${image.url}" alt="${image.alt}"  style = "width: 500px; height: 100%"/></li>`;
   //додаємо кожен елемент до списку
   gallery.insertAdjacentHTML('beforeend', itemListEl);
   console.log(itemListEl);
 });
 
-//можна додати  деякі стилі: прибераємо маркування списку, додаємо флексбокс
-// gallery.style.listStyleType = 'none';
-// gallery.style.display = 'flex';
-// gallery.style.justifyContent = 'space-around';
-// gallery.style.padding = '20px';
+// додати  деякі стилі: прибераємо маркування списку, додаємо флексбокс
+gallery.style.listStyleType = 'none';
+gallery.style.display = 'flex';
+gallery.style.justifyContent = 'space-around';
+gallery.style.padding = '20px';
 
 // const itemGallery = images
 //   .map(
 //     ({ url, alt }) =>
-//       `<li><img  src="${url}" alt="${alt}" width = 500 height = auto /></li>`
+//       `<li><img  src="${url}" alt="${alt}" style = "width: 500px; height: 100%" /></li>`
 //   )
 //   .join('');
 // console.log(itemGallery);
