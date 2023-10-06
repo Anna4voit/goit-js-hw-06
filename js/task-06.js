@@ -15,13 +15,15 @@ function changeStyle(event) {
   //отримуємо довжину  рядка, що вводиться в поле
   const valueInput = event.currentTarget.value.trim().length;
   //порівнюємо довжину рядка із значенням атрибуту і змінюємо колір бордеру
-  if (valueInput == length) {
-    inputEl.classList.add('valid');
-    inputEl.classList.remove('invalid');
+  if (valueInput === length) {
+    updateClassList('valid', 'invalid');
   } else {
-    inputEl.classList.add('invalid');
-    inputEl.classList.remove('valid');
+    updateClassList('invalid', 'valid');
   }
+}
+function updateClassList(a, b) {
+  inputEl.classList.add(a);
+  inputEl.classList.remove(b);
 }
 
 //Метод trim() удаляет пробельные символы с начала и конца

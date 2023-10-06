@@ -41,7 +41,7 @@ function destroyBoxes(event) {
 //функція створення елементів колекції через elem.append()
 function createBoxes(amount) {
   let step = 30;
-  const arr = [];
+  const arr = []; //треба const, якщо поставити let, то список буде повторювате попередньо створене
   for (let i = 0; i < amount; i += 1) {
     step += 10;
     const box = document.createElement('div');
@@ -63,4 +63,4 @@ function createBoxes(amount) {
 //     arr.push(box);
 //   }
 //   divBoxes.insertAdjacentHTML('beforeend', arr.join(''));
-// }
+//  }

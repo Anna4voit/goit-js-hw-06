@@ -9,7 +9,7 @@ const ingredients = [
 
 //знаїодимо список за id
 const listIngredientsEl = document.querySelector('#ingredients');
-
+const list = [];
 ingredients.forEach(ingredient => {
   //створюємо елемент списку для кожного елемента масиву інградієнтів
   const itemListIngredientsEl = document.createElement('li');
@@ -17,10 +17,11 @@ ingredients.forEach(ingredient => {
   itemListIngredientsEl.textContent = ingredient;
   //створюємо клас для кожного елементу
   itemListIngredientsEl.classList.add('item');
-  //додаємо один або декілька елементів після всіх дітей елемента (кожного пункту списку)
-  listIngredientsEl.append(itemListIngredientsEl);
-  console.log(itemListIngredientsEl);
+  //створюємо масив усіх елементів
+  list.push(itemListIngredientsEl);
 });
+//додаємо  елементи після всіх дітей елемента (кожного пункту списку)
+listIngredientsEl.append(...list);
 
 //можна зробити так
 // const itemsEl = ingredients.map(ingredient => {

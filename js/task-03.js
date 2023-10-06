@@ -14,13 +14,14 @@ const images = [
 ];
 
 const gallery = document.querySelector('.gallery');
+const arr = [];
 images.forEach(image => {
   //створюємо шаблонний рядок
   const itemListEl = `<li><img  src="${image.url}" alt="${image.alt}"  style = "width: 500px; height: 100%"/></li>`;
-  //додаємо кожен елемент до списку
-  gallery.insertAdjacentHTML('beforeend', itemListEl);
-  console.log(itemListEl);
+  arr.push(itemListEl);
 });
+//додаємо кожен елемент до списку
+gallery.insertAdjacentHTML('beforeend', arr.join(''));
 
 // додати  деякі стилі: прибераємо маркування списку, додаємо флексбокс
 gallery.style.listStyleType = 'none';

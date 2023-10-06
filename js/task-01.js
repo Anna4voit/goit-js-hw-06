@@ -7,11 +7,17 @@ console.log('Number of categories: ', listEl.children.length);
 //   document.querySelector('#categories').children.length;
 // console.log(amountCategoriesEl);
 
-//Порахує і виведе текст заголовку елемента
-const titleListEl = listEl.querySelectorAll('h2');
-//console.log(titleListEl); виводить псевдомасив заголовків
-titleListEl.forEach(title => {
-  console.log('Category: ', title.textContent);
-  console.log('Elements: ', title.nextElementSibling.children.length);
-  // шукає у наступного сусіда нащадків і виводить їх кількість
+const listCategories = listEl.children;
+[...listCategories].forEach(category => {
+  console.log('Category: ', category.firstElementChild.textContent);
+  console.log('Elements: ', category.lastElementChild.children.length);
 });
+
+// //Порахує і виведе текст заголовку елемента
+// const titleListEl = listEl.querySelectorAll('h2');
+// //console.log(titleListEl); //виводить псевдомасив заголовків
+// titleListEl.forEach(title => {
+//   console.log('Category: ', title.textContent);
+//   console.log('Elements: ', title.nextElementSibling.children.length);
+//   // шукає у наступного сусіда нащадків і виводить їх кількість
+// });
